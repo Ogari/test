@@ -1,0 +1,51 @@
+<ion-header>
+  <ion-navbar color = "primary">
+    <ion-title>
+      Dados
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+<ion-list>
+
+  <ion-item>
+    <button ion-button color="primary" (click)='resultRoll(4);' outline>D4</button>
+  </ion-item>
+
+  <ion-item>
+    <button ion-button color="secondary" (click)='resultRoll(6);' outline>D6</button>
+  </ion-item>
+
+    <ion-item>
+    <button ion-button color="danger" (click)='resultRoll(8);' outline>D8</button>
+  </ion-item>
+
+
+  <ion-item>
+    <button ion-button color="dark" (click)='resultRoll(10);' outline>D10</button>
+  </ion-item>
+
+    <ion-item>
+    <button ion-button color="newPurple" (click)='resultRoll(12);' outline>D12</button>
+  </ion-item>
+
+  <ion-item>
+    <button ion-button color="newBlue" (click)='resultRoll(20);' outline>D20</button>
+  </ion-item>
+
+  <ion-card>
+  <ion-card-header>
+    D{{ dice }}:
+  </ion-card-header>
+  <!--<ion-card-content class = "resultD4">-->
+  <ion-card-content class = "resultRoll">
+    {{ result }}
+  </ion-card-content>
+</ion-card>
+
+</ion-list>
+
+
+</ion-content>
