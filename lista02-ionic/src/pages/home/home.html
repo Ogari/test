@@ -1,49 +1,70 @@
 <ion-header>
   <ion-navbar color = "primary">
-    <ion-title>
-      Dados
+    <ion-title style="text-align: center">
+      Dados - RPG
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
 
-<ion-list>
+<ion-list> 
 
-  <ion-item>
-    <button ion-button color="primary" (click)='resultRoll(4);' outline>D4</button>
+  <ion-item> 
+    <button  style="width: 75px; height: 85px; font-size: 150%; text-align: center" 
+    ion-button color="primary" (click)='resultRoll(4);'>D4</button>
+
+    <button style="width: 75px; height: 85px; font-size: 150%;left: 85%; text-align: center" 
+    ion-button color="secondary" (click)='resultRoll(6);'>D6</button>
   </ion-item>
 
-  <ion-item>
-    <button ion-button color="secondary" (click)='resultRoll(6);' outline>D6</button>
-  </ion-item>
+  <!--<ion-item>
+    <button ion-button color="secondary" (click)='resultRoll(6);'>D6</button>
+  </ion-item>-->
 
     <ion-item>
-    <button ion-button color="danger" (click)='resultRoll(8);' outline>D8</button>
+    <button style="width: 75px; height: 85px; font-size: 150%; text-align: center"
+    ion-button  color="danger" (click)='resultRoll(8);'>D8</button>
+
+
+    <button style="width: 75px; height: 85px; font-size: 150%;left: 85%; text-align: center" 
+    ion-button color="dark" (click)='resultRoll(10);'>D10</button>
   </ion-item>
 
 
-  <ion-item>
-    <button ion-button color="dark" (click)='resultRoll(10);' outline>D10</button>
-  </ion-item>
+  <!--<ion-item>
+    <button ion-button color="dark" (click)='resultRoll(10);'>D10</button>
+  </ion-item>-->
 
     <ion-item>
-    <button ion-button color="newPurple" (click)='resultRoll(12);' outline>D12</button>
+    <button style="width: 75px; height: 85px; font-size: 150%; text-align: center"
+    ion-button color="newPurple" (click)='resultRoll(12);'>D12</button>
+
+    <button style="width: 75px; height: 85px; font-size: 150%;left: 85%; text-align: center" 
+    ion-button color="newBlue" (click)='resultRoll(20);'>D20</button>
   </ion-item>
 
-  <ion-item>
-    <button ion-button color="newBlue" (click)='resultRoll(20);' outline>D20</button>
-  </ion-item>
+  <!--<ion-item>
+    <button ion-button color="newBlue" (click)='resultRoll(20);'>D20</button>
+  </ion-item>-->
 
-  <ion-card>
-  <ion-card-header>
+  <ion-card style="text-align: center">
+  <ion-card-header style = "font-size: 200%">
     D{{ dice }}:
   </ion-card-header>
   <!--<ion-card-content class = "resultD4">-->
-  <ion-card-content class = "resultRoll">
+  <ion-card-content class = "resultRoll" style = "font-size: 200%">
     {{ result }}
   </ion-card-content>
 </ion-card>
+
+  <div class="item images-parent">
+
+    <!--"{{dice}}" representa  valor da variavel do dado-->
+  <img src="img/d{{dice}}-1.jpg" class="center-image"> 
+  </div>
+
+<!--<img src="img/d4-1.JPG" style="width: 50px; height: 50px" class="center-image">-->
 
 </ion-list>
 
